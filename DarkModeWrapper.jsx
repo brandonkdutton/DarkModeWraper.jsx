@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import Paper from '@material-ui/core/Paper';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import makeStyles from '@material-ui/styles/makeStyles';
 
 function DarkModeWrapper(props) {
@@ -28,9 +27,8 @@ function DarkModeWrapper(props) {
     return (
         <>
             <ThemeProvider theme={theme}>
-                <CssBaseline />
                 <Paper square className={classes.backPaperStyle}>
-                    <div>{props.children}</div>
+                    {props.children}
                     <button onClick={() => setDarkMode(!darkMode)}>Toggle dark mode</button>
                 </Paper>
             </ThemeProvider>
