@@ -15,8 +15,8 @@ function DarkModeWrapper(props) {
 
     const useStyles = makeStyles({
         backPaperStyle: {
-            height: '100%',
-            width: '100%',
+            minHeight: '100%',
+            minWidth: '100%',
             position: 'absolute',
             backgroundColor: theme.palette.background.default,
         },
